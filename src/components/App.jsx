@@ -1,13 +1,19 @@
-import { Score } from "../components/Score";
-import { Timer } from "./Timer";
-import { Image } from "./Image";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Judge } from "./Judge";
+import { Referee } from "./Referee";
+import { AuthLayout } from "../Layout/AuthLayout";
 
 export function App() {
   return (
     <>
-      <Score />
-      <Timer />
-      <Image />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AuthLayout />}>
+            <Route index element={<Judge />} />
+            <Route path="referee" element={<Referee />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
