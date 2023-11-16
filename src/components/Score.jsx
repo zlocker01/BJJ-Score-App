@@ -1,67 +1,16 @@
-import { useState } from "react";
+import { useScore } from "./ScoreContext";
 
 export function Score() {
-  // states for Scores
-  const [scores, setScores] = useState({
-    red: 0,
-    blue: 0,
-  });
-
-  // states for Advantages
-  const [advantages, setAdvantages] = useState({
-    red: 0,
-    blue: 0,
-  });
-
-  // states for Penalties
-  const [penalties, setPenalties] = useState({
-    red: 0,
-    blue: 0,
-  });
-
-  // states for Discualified
-  const [isDisqualified, setIsDisqualified] = useState("");
-
-  // handle events on Score
-  const handleScore = (player, value) => {
-    setScores((prevScores) => ({
-      ...prevScores,
-      [player]: prevScores[player] + value,
-    }));
-  };
-
-  // handle events on Advantages
-  const handleAdvantages = (player, value) => {
-    setAdvantages((prevAdvantages) => ({
-      ...prevAdvantages,
-      [player]: prevAdvantages[player] + value,
-    }));
-  };
-
-  // handle events on Penalties
-  const handlePenalties = (player, value) => {
-    setPenalties((prevPenalties) => ({
-      ...prevPenalties,
-      [player]: prevPenalties[player] - value,
-    }));
-
-    // updating Scores when penalities get -1
-    if (value === 1) {
-      setScores((prevScores) => ({
-        ...prevScores,
-        [player]: prevScores[player] - 1,
-      }));
-    }
-  };
-
-  // handle events on Advantages
-  const handleDisqualified = (player) => {
-    if (player === "red") {
-      setIsDisqualified("¡RED ESTÁ DESCALIFICADO!");
-    } else {
-      setIsDisqualified("¡BLUE ESTÁ DESCALIFICADO!");
-    }
-  };
+  const {
+    scores,
+    advantages,
+    penalties,
+    isDisqualified,
+    handleScore,
+    handleAdvantages,
+    handlePenalties,
+    handleDisqualified
+  } = useScore();
 
   return (
     <>
@@ -113,7 +62,7 @@ export function Score() {
         <button onClick={() => handleDisqualified("blue")}>
           Descalificar a Blue
         </button>
-        <alert>{isDisqualified}</alert>
+        <h4>{isDisqualified}</h4>
       </div>
     </>
   );
