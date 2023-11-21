@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export function Score() {
   // states for Scores
@@ -19,8 +19,8 @@ export function Score() {
     blue: 0,
   });
 
-  // states for Discualified
-  const [isDisqualified, setIsDisqualified] = useState('');
+  // states for Disqualified
+  const [isDisqualified, setIsDisqualified] = useState("");
 
   // handle events on Score
   const handleScore = (player, value) => {
@@ -45,7 +45,7 @@ export function Score() {
       [player]: prevPenalties[player] - value,
     }));
 
-    // updating Scores when penalities get -1
+    // updating Scores when penalties get -1
     if (value === 1) {
       setScores((prevScores) => ({
         ...prevScores,
@@ -54,11 +54,15 @@ export function Score() {
     }
   };
 
-  // handle events on Advantages
+  // handle events on Disqualified
   const handleDisqualified = (player) => {
-    setIsDisqualified (
-      `¡${player} DESCALIFICADO!`
-    )
+    setIsDisqualified(prevDisqualified => {
+      if (player === "red") {
+        return "¡RED ESTÁ DESCALIFICADO!";
+      } else {
+        return "¡BLUE ESTÁ DESCALIFICADO!";
+      }
+    });
   };
 
   return (
@@ -109,8 +113,8 @@ export function Score() {
         <button onClick={() => handleDisqualified("blue")}>
           Descalificar a Blue
         </button>
-        <alert>{isDisqualified}</alert>
+        <h4>{isDisqualified}</h4>
       </div>
     </>
-  )
+  );
 }
