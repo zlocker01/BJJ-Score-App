@@ -66,7 +66,8 @@ export function Score() {
     const localScores = JSON.parse(localStorage.getItem("scores")) || {};
     const localAdvantages =
       JSON.parse(localStorage.getItem("advantages")) || {};
-    const localPenalties = JSON.parse(localStorage.getItem("penalties")) || {};
+    const localPenalties = 
+      JSON.parse(localStorage.getItem("penalties")) || {};
     const localIsDisqualified =
       JSON.parse(localStorage.getItem("isDisqualified")) || "";
 
@@ -86,8 +87,6 @@ export function Score() {
 
   return (
     <>
-      <h1>Marcador</h1>
-
       {/* showing and changing the Score */}
       <div>
         <button onClick={() => handleScore("red", 1)}>
