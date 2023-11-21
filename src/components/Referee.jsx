@@ -6,6 +6,8 @@ export const Referee = () => {
   const [advantages, setAdvantages] = useState({ red: 0, blue: 0 });
   const [penalties, setPenalties] = useState({ red: 0, blue: 0 });
   const [isDisqualified, setIsDisqualified] = useState("");
+  const [timer, setTimer] = useState({});
+  const [message, setMessage] = useState('');
 
   // Functions to get data from localStorage
   const getLocalScores = () => {
@@ -26,12 +28,22 @@ export const Referee = () => {
     return JSON.parse(localStorage.getItem("isDisqualified")) || "";
   };
 
+  const getLocalTimer = () => {
+    return JSON.parse(localStorage.getItem("timer"));
+  };
+
+  const getLocalMessage = () => {
+    return JSON.parse(localStorage.getItem("message"));
+  };
+
   // function to update ith change in localStorage
   useEffect(() => {
     setScores(getLocalScores());
     setAdvantages(getLocalAdvantages());
     setPenalties(getLocalPenalties());
     setIsDisqualified(getLocalIsDisqualified());
+    setTimer(getLocalTimer());
+    setMessage(getLocalMessage());
   }, []);
 
   //  aditional function to watch changes on scores
@@ -41,9 +53,11 @@ export const Referee = () => {
       setAdvantages(getLocalAdvantages());
       setPenalties(getLocalPenalties());
       setIsDisqualified(getLocalIsDisqualified());
+      setTimer(getLocalTimer());
+      setMessage(getLocalMessage());
     };
 
-    window.addEventListener('storage', handleScoreChange);
+    window.addEventListener("storage", handleScoreChange);
 
     return () => {
       window.removeEventListener("storage", handleScoreChange);
@@ -76,6 +90,16 @@ export const Referee = () => {
       {/* Show Disqualified alert */}
       <div>
         <h4>{isDisqualified}</h4>
+      </div>
+
+      <h2>Tiempo</h2>
+      {/* Show Timer */}
+      <div>
+        <span>
+          Temporizador: {String(timer.minutes).padStart(2, "0")}:
+          {String(timer.seconds).padStart(2, "0")}
+        </span>
+        <h3>{message}</h3>
       </div>
     </>
   );
