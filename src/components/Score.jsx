@@ -20,7 +20,7 @@ export function Score() {
   });
 
   // states for Discualified
-  const [isDisqualified, setIsDisqualified] = useState("");
+  const [isDisqualified, setIsDisqualified] = useState('');
 
   // handle events on Score
   const handleScore = (player, value) => {
@@ -56,16 +56,15 @@ export function Score() {
 
   // handle events on Advantages
   const handleDisqualified = (player) => {
-    if (player === "red") {
-      setIsDisqualified("¡RED ESTÁ DESCALIFICADO!");
-    } else {
-      setIsDisqualified("¡BLUE ESTÁ DESCALIFICADO!");
-    }
+    setIsDisqualified (
+      `¡${player} DESCALIFICADO!`
+    )
   };
 
   return (
     <>
-      <h2>Puntos</h2>
+      <h1>Marcador</h1>
+
       {/* showing and changing the Score */}
       <div>
         <button onClick={() => handleScore("red", 1)}>
@@ -79,7 +78,6 @@ export function Score() {
       </div>
 
       {/* showing and changing the Advantages */}
-      <h3>Ventajas</h3>
       <div>
         <button onClick={() => handleAdvantages("red", 1)}>
           Añadir Ventaja a Red
@@ -92,7 +90,6 @@ export function Score() {
       </div>
 
       {/* showing and changing the Penalties */}
-      <h3>Penalizaciones</h3>
       <div>
         <button onClick={() => handlePenalties("red", 1)}>
           Añadir Penalización a Red
@@ -105,7 +102,6 @@ export function Score() {
       </div>
 
       {/* showing Disqualified Alert */}
-      <h3>Descalificaciones</h3>
       <div>
         <button onClick={() => handleDisqualified("red")}>
           Descalificar a Red
@@ -116,5 +112,5 @@ export function Score() {
         <alert>{isDisqualified}</alert>
       </div>
     </>
-  );
+  )
 }

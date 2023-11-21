@@ -7,12 +7,12 @@ export function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<AuthLayout />}>
-            <Route index element={<Judge />} />
-            <Route path="referee" element={<Referee />} />
-          </Route>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<AuthLayout />}>
+              <Route index element={<Judge />} />
+              <Route path="referee" element={<Referee />} />
+            </Route>
+          </Routes>
       </BrowserRouter>
     </>
   );

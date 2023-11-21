@@ -21,7 +21,7 @@ export const Image = () => {
     <div>
       <h3>Imagen</h3>
       <input type="file" onChange={handleImageUpload} />
-      {image && <img src={image} alt="Uploaded" style={{ maxWidth: "10%" }} />}
+      {image && <img src={image} alt='score ligue image' style={{ maxWidth: "10%" }} />}
     </div>
   );
 };
