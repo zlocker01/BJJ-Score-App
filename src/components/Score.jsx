@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import  { useState, useEffect } from "react";
 
 export function Score() {
   // states for Scores
@@ -56,14 +56,33 @@ export function Score() {
 
   // handle events on Disqualified
   const handleDisqualified = (player) => {
-    setIsDisqualified(prevDisqualified => {
-      if (player === "red") {
-        return "¡RED ESTÁ DESCALIFICADO!";
-      } else {
-        return "¡BLUE ESTÁ DESCALIFICADO!";
-      }
-    });
+    setIsDisqualified(
+      `¡${player === "red" ? "RED" : "BLUE"} ESTÁ DESCALIFICADO!`
+    );
   };
+
+  // useEffect to read data from localStorage when the component loads
+  useEffect(() => {
+    const localScores = JSON.parse(localStorage.getItem("scores")) || {};
+    const localAdvantages =
+      JSON.parse(localStorage.getItem("advantages")) || {};
+    const localPenalties = JSON.parse(localStorage.getItem("penalties")) || {};
+    const localIsDisqualified =
+      JSON.parse(localStorage.getItem("isDisqualified")) || "";
+
+    setScores(localScores);
+    setAdvantages(localAdvantages);
+    setPenalties(localPenalties);
+    setIsDisqualified(localIsDisqualified);
+  }, []);
+
+  // useEffect to store data in localStorage when something changes
+  useEffect(() => {
+    localStorage.setItem("scores", JSON.stringify(scores));
+    localStorage.setItem("advantages", JSON.stringify(advantages));
+    localStorage.setItem("penalties", JSON.stringify(penalties));
+    localStorage.setItem("isDisqualified", JSON.stringify(isDisqualified));
+  }, [scores, advantages, penalties, isDisqualified]);
 
   return (
     <>
