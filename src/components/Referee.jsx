@@ -7,7 +7,8 @@ export const Referee = () => {
   const [penalties, setPenalties] = useState({ red: 0, blue: 0 });
   const [isDisqualified, setIsDisqualified] = useState("");
   const [timer, setTimer] = useState({});
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
+  const [image, setImage] = useState(null);
 
   // Functions to get data from localStorage
   const getLocalScores = () => {
@@ -36,6 +37,10 @@ export const Referee = () => {
     return JSON.parse(localStorage.getItem("message"));
   };
 
+  const getLocalImage = () => {
+    return JSON.parse(localStorage.getItem("image"));
+  };
+
   // function to update ith change in localStorage
   useEffect(() => {
     setScores(getLocalScores());
@@ -44,6 +49,7 @@ export const Referee = () => {
     setIsDisqualified(getLocalIsDisqualified());
     setTimer(getLocalTimer());
     setMessage(getLocalMessage());
+    setImage(getLocalImage());
   }, []);
 
   //  aditional function to watch changes on scores
@@ -55,6 +61,7 @@ export const Referee = () => {
       setIsDisqualified(getLocalIsDisqualified());
       setTimer(getLocalTimer());
       setMessage(getLocalMessage());
+      setImage(getLocalImage());
     };
 
     window.addEventListener("storage", handleScoreChange);
@@ -101,6 +108,11 @@ export const Referee = () => {
         </span>
         <h3>{message}</h3>
       </div>
+
+      {/* Show Photo */}
+      <div>
+      {image && <img src={image} alt="Uploaded" style={{ maxWidth: "10%" }} />}
+    </div>
     </>
   );
 };
