@@ -58,12 +58,13 @@ export const Timer = () => {
     return () => clearInterval(interval);
   }, [timer.isPaused]);
 
-  // saving timer in localStorage 
+  // saving timer and time-over messagein localStorage 
   useEffect(() => {
     localStorage.setItem("timer", JSON.stringify(timer));
-  }, [timer]);
+    localStorage.setItem("timeOver", JSON.stringify(timeOver));
+  }, [timer, timeOver]);
 
-  // getting timer from localStorage
+  // getting timer and time-over message from localStorage
   useEffect(() => {
     const localTimer = JSON.parse(localStorage.getItem("timer"));
     if (localTimer) {
