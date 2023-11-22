@@ -77,7 +77,7 @@ export const Timer = () => {
   // rendering
   return (
     <div>
-      <h3>Tiempo</h3>
+      <h2>Tiempo</h2>
       <button onClick={handleTimerStart}>Iniciar Temporizador</button>
       <button onClick={handleTimerPause}>Pausar Temporizador</button>
       <button onClick={handleTimerReset}>Reiniciar Temporizador</button>

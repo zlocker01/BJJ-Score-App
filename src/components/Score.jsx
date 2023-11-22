@@ -94,6 +94,7 @@ export function Score() {
 
   return (
     <>
+    <h2>Puntos</h2>
       {/* showing and changing the Score */}
       <div>
         <button onClick={() => handleScore("red", 1)}>

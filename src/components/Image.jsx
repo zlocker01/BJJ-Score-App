@@ -32,6 +32,7 @@ export const Image = () => {
 
   return (
     <div>
+      <h2>Imagen</h2>
       <input type="file" onChange={handleImageUpload} />
       {image && <img src={image} alt="Uploaded" style={{ maxWidth: "10%" }} />}
     </div>
