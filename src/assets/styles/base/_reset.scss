@@ -1,0 +1,17 @@
+@import '../styles/components/variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font-family: $font-family;
+
+    a{
+        text-decoration: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+

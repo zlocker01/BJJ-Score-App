@@ -7,6 +7,7 @@ export const Timer = () => {
     seconds: 0,
     isPaused: true,
   });
+  
 
   const [inputMinutes, setInputMinutes] = useState(6);
   const [inputSeconds, setInputSeconds] = useState(0);
