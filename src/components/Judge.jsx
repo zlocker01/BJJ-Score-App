@@ -7,7 +7,7 @@ export const Judge = () => {
     <>
       <Score />
       <Timer />
-      <Image />;
+      <Image />
     </>
   );
 };

@@ -7,7 +7,7 @@ export const Referee = () => {
   const [penalties, setPenalties] = useState({ red: 0, blue: 0 });
   const [isDisqualified, setIsDisqualified] = useState("");
   const [timer, setTimer] = useState({});
-  const [message, setMessage] = useState("");
+  const [timeOver, setTimeOver] = useState("");
   const [image, setImage] = useState(null);
 
   // Functions to get data from localStorage
@@ -34,7 +34,7 @@ export const Referee = () => {
   };
 
   const getLocalMessage = () => {
-    return JSON.parse(localStorage.getItem("message"));
+    return JSON.parse(localStorage.getItem("timeOver"));
   };
 
   const getLocalImage = () => {
@@ -48,7 +48,7 @@ export const Referee = () => {
     setPenalties(getLocalPenalties());
     setIsDisqualified(getLocalIsDisqualified());
     setTimer(getLocalTimer());
-    setMessage(getLocalMessage());
+    setTimeOver(getLocalMessage());
     setImage(getLocalImage());
   }, []);
 
@@ -60,7 +60,7 @@ export const Referee = () => {
       setPenalties(getLocalPenalties());
       setIsDisqualified(getLocalIsDisqualified());
       setTimer(getLocalTimer());
-      setMessage(getLocalMessage());
+      setTimeOver(getLocalMessage());
       setImage(getLocalImage());
     };
 
@@ -106,7 +106,7 @@ export const Referee = () => {
           Temporizador: {String(timer.minutes).padStart(2, "0")}:
           {String(timer.seconds).padStart(2, "0")}
         </span>
-        <h3>{message}</h3>
+        <h3>{timeOver}</h3>
       </div>
 
       {/* Show Photo */}
