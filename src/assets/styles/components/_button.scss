@@ -1,0 +1,21 @@
+// mixin for button
+
+@mixin button ($colorBG, $color, $colorBG2, $color2){
+    display: inline-block;
+    padding: 5px  8px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: .25rem;
+    background-color: $colorBG;
+    color: $color;
+    margin: 8px;
+    font-weight: 500;
+
+    &:hover {
+        background-color: $colorBG2;
+        color: $color2;
+    }
+
+}

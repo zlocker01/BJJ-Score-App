@@ -77,7 +77,7 @@ export const Timer = () => {
 
   // rendering
   return (
-    <div>
+    <section className="timer">
       <h2>Tiempo</h2>
       <button onClick={handleTimerStart}>Iniciar Temporizador</button>
       <button onClick={handleTimerPause}>Pausar Temporizador</button>
@@ -106,6 +106,6 @@ export const Timer = () => {
         {String(timer.seconds).padStart(2, "0")}
       </span>
       {timeOver && <h3>{timeOver}</h3>}
-    </div>
+    </section>
   );
 };

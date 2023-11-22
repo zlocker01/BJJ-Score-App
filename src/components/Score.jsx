@@ -93,7 +93,7 @@ export function Score() {
   }, [scores, advantages, penalties, isDisqualified]);
 
   return (
-    <>
+    <section className="score">
     <h2>Puntos</h2>
       {/* showing and changing the Score */}
       <div>
@@ -148,6 +148,6 @@ export function Score() {
           Reset Marcador
         </button>
       </div>
-    </>
+    </section>
   );
 }

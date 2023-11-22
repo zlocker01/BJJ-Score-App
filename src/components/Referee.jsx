@@ -72,7 +72,7 @@ export const Referee = () => {
   }, []);
 
   return (
-    <>
+    <section className= "referee">
       <h2>Scores</h2>
       {/* Show and change the score */}
       <div>
@@ -113,6 +113,6 @@ export const Referee = () => {
       <div>
       {image && <img src={image} alt="Uploaded" style={{ maxWidth: "10%" }} />}
     </div>
-    </>
+    </section>
   );
 };

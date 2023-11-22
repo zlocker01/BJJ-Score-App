@@ -1,20 +1,15 @@
 // mixin for displays grid/flex
 
-@mixin grid($cols, $rows, $espace){
+@mixin grid($cols, $rows, $espace) {
     display: grid;
     grid-template-columns: repeat($cols, 1fr);
     grid-template-rows: $rows;
     gap: 1em;
-};
+}
 
-@mixin flex($direction, $cut, $just, $align){
+@mixin flex {
     display: flex;
-    flex-flow: $direction $cut;
-    justify-content: $just;
-    align-items: $align;
-};
-
-
-
-
-
+    flex-flow: row wrap;
+    justify-content:space-between ;
+    align-items: center;
+}

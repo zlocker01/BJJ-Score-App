@@ -1,0 +1,32 @@
+@import '../components/mixins';
+@import '../components/span';
+@import '../components/button';
+
+@mixin judge {
+    .judge {
+        @include grid(2, 2, 1);
+        a {
+            @include button (red, yellow, green, black);
+            max-width: 300px;
+            padding-top: 13px;
+        }
+        
+        .score{
+            button, a {
+                @include button (red, yellow, green, black)
+            }
+        }
+
+        .timer{
+            button, a {
+                @include button (red, yellow, green, black)
+            }
+        }
+
+
+        span, input {
+            @include span;
+        }    
+
+    }
+}
