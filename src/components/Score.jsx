@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export function Score() {
   // states for Scores
@@ -61,13 +61,20 @@ export function Score() {
     );
   };
 
+  // handle to reset scores
+  const handleReset = () => {
+    setScores({ red: 0, blue: 0 });
+    setAdvantages({ red: 0, blue: 0 });
+    setPenalties({ red: 0, blue: 0 });
+    setIsDisqualified("");
+  };
+
   // useEffect to read data from localStorage when the component loads
   useEffect(() => {
     const localScores = JSON.parse(localStorage.getItem("scores")) || {};
     const localAdvantages =
       JSON.parse(localStorage.getItem("advantages")) || {};
-    const localPenalties = 
-      JSON.parse(localStorage.getItem("penalties")) || {};
+    const localPenalties = JSON.parse(localStorage.getItem("penalties")) || {};
     const localIsDisqualified =
       JSON.parse(localStorage.getItem("isDisqualified")) || "";
 
@@ -132,6 +139,13 @@ export function Score() {
           Descalificar a Blue
         </button>
         <h4>{isDisqualified}</h4>
+      </div>
+
+      {/* reseting the scores */}
+      <div>
+        <button onClick={handleReset}>
+          Reset Marcador
+        </button>
       </div>
     </>
   );
