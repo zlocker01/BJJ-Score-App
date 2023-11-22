@@ -1,0 +1,10 @@
+@import '../styles/base/reset';
+@import '../styles/base/typography';
+@import'../styles/components/button';
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
