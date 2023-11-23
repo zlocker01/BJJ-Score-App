@@ -105,7 +105,7 @@ export const Timer = () => {
         Temporizador: {String(timer.minutes).padStart(2, "0")}:
         {String(timer.seconds).padStart(2, "0")}
       </span>
-      {timeOver && <h3>{timeOver}</h3>}
+      {timeOver && <h3 className="time-message">{timeOver}</h3>}
     </section>
   );
 };

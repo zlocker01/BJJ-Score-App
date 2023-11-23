@@ -1,6 +1,8 @@
-@import '../styles/components/variables';
+@import '../components/variables';
 @import './judge';
 * {
+    background-color: $primary-color;
+    color: $text;
     box-sizing: border-box;
     margin: 0;
     border: 0;

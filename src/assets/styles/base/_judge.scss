@@ -1,28 +1,19 @@
 @import '../components/mixins';
 @import '../components/span';
 @import '../components/button';
+@import '../components/variables';
 
 @mixin judge {
     .judge {
         @include grid(2, 2, 1);
-        a {
-            @include button (red, yellow, green, black);
+
+        margin-left: 20PX;
+
+        button, a {
+            @include button ($button, $text, $button-hover, $text);
             max-width: 300px;
             padding-top: 13px;
         }
-        
-        .score{
-            button, a {
-                @include button (red, yellow, green, black)
-            }
-        }
-
-        .timer{
-            button, a {
-                @include button (red, yellow, green, black)
-            }
-        }
-
 
         span, input {
             @include span;
