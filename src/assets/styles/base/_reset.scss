@@ -1,5 +1,6 @@
 @import '../components/variables';
 @import './judge';
+@import './referee';
 * {
     background-color: $primary-color;
     color: $text;
@@ -20,5 +21,10 @@ h1, h2, h4 {
 a {
     text-decoration: none;
 }
- @include judge;
+
+@include judge;
+
+.referee {
+    @include referee;
+}
 

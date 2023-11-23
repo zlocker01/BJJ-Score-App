@@ -1,0 +1,7 @@
+@import './variables';
+
+@mixin score ($bg) {
+    background-color: $bg;
+    padding: 20px;
+    border-radius: 7px;
+}

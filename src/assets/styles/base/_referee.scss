@@ -1,0 +1,31 @@
+@import '../components/variables';
+@import '../components/mixins';
+@import '../components/score';
+
+@mixin referee {
+    background-color:  $referee-color; 
+    
+    h2, span{
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .advantages{
+        color: $green;
+    }
+
+    .penalties{
+        color: red;
+    }
+
+    .scoreblue {
+        @include score($blue);
+    }
+
+    .scorered {
+        @include score($red);
+    }
+}

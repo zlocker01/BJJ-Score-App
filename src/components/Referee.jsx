@@ -73,25 +73,26 @@ export const Referee = () => {
 
   return (
     <section className= "referee">
-      <h2>Scores</h2>
       {/* Show and change the score */}
       <div>
-        <span>Red: {scores.red}</span>
-        <span>Blue: {scores.blue}</span>
+        <span className="scorered">{scores.red}</span>
+      <h3 className="advantages">Ventajas</h3>
+        <span className="advantages">{advantages.red}</span>
+      <h3 className="penalties">Penalizaciones</h3>
+        <span className="penalties">{penalties.red}</span>
       </div>
 
       {/* Show and change the advantages */}
-      <h3>Advantages</h3>
       <div>
-        <span>Red: {advantages.red}</span>
-        <span>Blue: {advantages.blue}</span>
+        <span className="scoreblue">{scores.blue}</span>
+      <h3 className="advantages">Ventajas</h3>
+        <span className="advantages"> {advantages.blue}</span>
+      <h3 className="penalties">Penalizaciones</h3>
+        <span className="penalties">{penalties.blue}</span>
       </div>
 
       {/* Show and change the penalties */}
-      <h3>Penalties</h3>
       <div>
-        <span>Red: {penalties.red}</span>
-        <span>Blue: {penalties.blue}</span>
       </div>
 
       {/* Show Disqualified alert */}
