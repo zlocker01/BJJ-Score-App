@@ -5,11 +5,13 @@
     grid-template-columns: repeat($cols, 1fr);
     grid-template-rows: $rows;
     gap: 1em;
+    justify-content: space-between;
+    grid-auto-flow: row;
 }
 
-@mixin flex {
+@mixin flex($align) {
     display: flex;
-    flex-flow: row wrap;
-    justify-content:space-between ;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: $align;
 }

@@ -5,9 +5,10 @@
 
 @mixin judge {
     .judge {
+        background-color: $primary-color;
         @include grid(2, 2, 1);
 
-        margin-left: 20PX;
+        margin-left: 30PX;
 
         button, a {
             @include button ($button, $text, $button-hover, $text);

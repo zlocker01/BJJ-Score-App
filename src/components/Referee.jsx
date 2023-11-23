@@ -72,48 +72,67 @@ export const Referee = () => {
   }, []);
 
   return (
-    <section className= "referee">
+    <section className="referee">
       {/* Show and change the score */}
-      <div>
-        <span className="scorered">{scores.red}</span>
-      <h3 className="advantages">Ventajas</h3>
-        <span className="advantages">{advantages.red}</span>
-      <h3 className="penalties">Penalizaciones</h3>
-        <span className="penalties">{penalties.red}</span>
-      </div>
+      <container className="containerred">
+        <div className="points-red">
+          <div className="red2">
+            <h3 className="advantages">Ventajas</h3>
+            <span className="advantages">{advantages.red}</span>
+            <h3 className="penalties">Penalizaciones</h3>
+            <span className="penalties">{penalties.red}</span>
+          </div>
+          <div className="red">
+            <span className="scorered">{scores.red}</span>
+          </div>
+        </div>
+        <div className="name-red">
+          <h2>Red</h2>
+        </div>
+      </container>
 
       {/* Show and change the advantages */}
-      <div>
-        <span className="scoreblue">{scores.blue}</span>
-      <h3 className="advantages">Ventajas</h3>
-        <span className="advantages"> {advantages.blue}</span>
-      <h3 className="penalties">Penalizaciones</h3>
-        <span className="penalties">{penalties.blue}</span>
-      </div>
+      <container className="containerblue">
+        <div className="points-blue">
+          <div className="blue2">
+            <h3 className="advantages">Ventajas</h3>
+            <span className="advantages"> {advantages.blue}</span>
+            <h3 className="penalties">Penalizaciones</h3>
+            <span className="penalties">{penalties.blue}</span>
+          </div>
+          <div className="blue">
+            <span className="scoreblue">{scores.blue}</span>
+          </div>
+        </div>
+        <div className="blue-name">
+          <h2>Blue</h2>
+        </div>
+      </container>
 
       {/* Show and change the penalties */}
-      <div>
-      </div>
 
       {/* Show Disqualified alert */}
       <div>
         <h4>{isDisqualified}</h4>
       </div>
 
-      <h2>Tiempo</h2>
       {/* Show Timer */}
-      <div>
+      <section className="section-timer">
+      <div className="timer">
         <span>
-          Temporizador: {String(timer.minutes).padStart(2, "0")}:
+          {String(timer.minutes).padStart(2, "0")}:
           {String(timer.seconds).padStart(2, "0")}
         </span>
-        <h3>{timeOver}</h3>
+        <h1>{timeOver}</h1>
       </div>
 
       {/* Show Photo */}
-      <div>
-      {image && <img src={image} alt="Uploaded" style={{ maxWidth: "10%" }} />}
-    </div>
+      <div className="image">
+        {image && (
+          <img src={image} alt="Uploaded" style={{ maxWidth: "10%" }} />
+          )}
+      </div>
+      </section>
     </section>
   );
 };

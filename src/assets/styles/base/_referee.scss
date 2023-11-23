@@ -3,16 +3,35 @@
 @import '../components/score';
 
 @mixin referee {
-    background-color:  $referee-color; 
-    
-    h2, span{
-        font-size: 50px;
-    }
+    background-color:  $referee-color;
 
-    h3 {
+    h1 {
+        color: red;
+    }
+    
+    h2 {
+        font-size: 80px;
+        color: $text;
+    }
+    
+    h3, span {
         font-size: 30px;
     }
 
+    .containerblue, .containerred {
+        @include flex;
+    }
+
+    .points-blue, .points-red {
+        @include flex;
+        order: 2;
+    }
+
+    .blue2, .red2 {
+        font-style: italic;
+        font-weight: 100;
+    }
+    
     .advantages{
         color: $green;
     }
@@ -20,12 +39,17 @@
     .penalties{
         color: red;
     }
-
+    
     .scoreblue {
         @include score($blue);
     }
 
+    
     .scorered {
         @include score($red);
+    }
+
+    .section-timer {
+        @include flex(center);
     }
 }
