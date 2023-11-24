@@ -3,12 +3,15 @@
 @import './judge';
 @import './referee';
 * {
-    background-color: $primary-color;
     color: $text;
     box-sizing: border-box;
     margin: 0;
     border: 0;
     font-family: $font-family;
+}
+
+html {
+    background-color: $primary-color;
 }
 
 h4 {
@@ -19,6 +22,7 @@ h1, h2, h4 {
     text-align: center;
 }
 
+
 a {
     max-height: 45px;
     min-height: 45px;
@@ -28,6 +32,8 @@ a {
 @include judge;
 
 .referee {
+    background-color: $referee-color;
+
     @include referee;
     h1, h4 {
         color: red;

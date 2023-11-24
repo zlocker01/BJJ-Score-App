@@ -3,12 +3,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 * {
-  background-color: #363062;
   color: #F5F5F5;
   box-sizing: border-box;
   margin: 0;
   border: 0;
   font-family: "Titillium Web", sans-serif;
+}
+
+html {
+  background-color: #363062;
 }
 
 h4 {
@@ -72,7 +75,9 @@ a {
 }
 
 .referee {
-  background-color: #040f0f;
+  background-color: rgba(0, 0, 0, 0.7647058824);
+  background-color: rgba(0, 0, 0, 0.7647058824);
+  height: 100vh;
 }
 .referee h1 {
   color: red;

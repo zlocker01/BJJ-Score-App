@@ -5,6 +5,8 @@
 @mixin referee {
     background-color:  $referee-color;
 
+    height: 100vh;
+
     h1 {
         color: red;
     }
@@ -17,6 +19,7 @@
     h3, span {
         font-size: 30px;
     }
+
 
     .containerblue, .containerred {
         @include flex(start);
