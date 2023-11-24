@@ -6,18 +6,19 @@
     background-color:  $referee-color;
 
     height: 100vh;
+    width: 100vw;
 
     h1 {
         color: red;
     }
     
     h2 {
-        font-size: 80px;
+        font-size: 5rem;
         color: $text;
     }
     
     h3, span {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
 
 

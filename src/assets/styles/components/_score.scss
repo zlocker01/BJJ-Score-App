@@ -1,8 +1,8 @@
 @import './variables';
 
 @mixin score ($bg) {    background-color: $bg;
-    padding:  5px 150px;
-    font-size: 160px;
+    padding:  .3125rem 9.375rem;
+    font-size: 10rem;
     font-weight: bold;
-    margin-left: 15px;
+    margin-left: .9375rem;
 }

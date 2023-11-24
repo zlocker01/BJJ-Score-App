@@ -8,12 +8,12 @@
         background-color: $primary-color;
         @include grid(2, 2, 1);
 
-        margin-left: 30PX;
+        margin-left: 1.875rem;
 
         button, a {
             @include button ($button, $text, $button-hover, $text);
-            max-width: 300px;
-            padding-top: 13px;
+            max-width: 18.75rem;
+            padding-top: .8125rem;
         }
 
         span, input {

@@ -1,9 +1,9 @@
 // mixin for span
 
 @mixin span {
-    font-size: 20px;
+    font-size: 1.25rem;
     background-color: rgba(181, 180, 180, 0.463);
-    padding: 0 8px;
-    border-radius: 3px;
+    padding: 0 .5rem;
+    border-radius: .1875rem;
     font-weight: 500;
 }

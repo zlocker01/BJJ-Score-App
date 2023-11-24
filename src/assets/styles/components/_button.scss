@@ -4,22 +4,22 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
-    padding: 5px  8px;
-    font-size: 16px;
+    padding: .3125rem  .5rem;
+    font-size: 1rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     border-radius: .25rem;
     background-color: $colorBG;
     color: $color;
-    margin: 8px;
+    margin: .5rem;
     font-weight: 500;
-    padding-bottom: 10px;
+    padding-bottom: .625rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     &:hover {
         background-color: $colorBG2;
         color: $color2;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.703);
+        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.703);
     }
 
     // effect onclick
