@@ -19,11 +19,11 @@
     }
 
     .containerblue, .containerred {
-        @include flex;
+        @include flex(start);
     }
 
     .points-blue, .points-red {
-        @include flex;
+        @include flex(start);
         order: 2;
     }
 
@@ -49,7 +49,7 @@
         @include score($red);
     }
 
-    .section-timer {
+    .sectiontimer {
         @include flex(center);
     }
 }

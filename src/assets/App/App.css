@@ -121,9 +121,16 @@ a {
   font-weight: bold;
   margin-left: 15px;
 }
-.referee .section-timer {
+.referee .sectiontimer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
+}
+
+.section-timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

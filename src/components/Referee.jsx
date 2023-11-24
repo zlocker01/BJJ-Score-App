@@ -117,7 +117,7 @@ export const Referee = () => {
       </div>
 
       {/* Show Timer */}
-      <section className="section-timer">
+      <section className="sectiontimer">
       <div className="timer">
         <span>
           {String(timer.minutes).padStart(2, "0")}:
