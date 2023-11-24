@@ -127,11 +127,9 @@ export const Referee = () => {
       </div>
 
       {/* Show Photo */}
-      <div className="image">
         {image && (
-          <img src={image} alt="Uploaded" style={{ maxWidth: "10%" }} />
+          <img src={image} alt="Championship-Logo" />
           )}
-      </div>
       </section>
     </section>
   );

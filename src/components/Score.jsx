@@ -57,7 +57,7 @@ export function Score() {
   // handle events on Disqualified
   const handleDisqualified = (player) => {
     setIsDisqualified(
-      `¡${player === "red" ? "RED" : "BLUE"} ESTÁ DESCALIFICADO!`
+      `❌¡${player === "red" ? "RED" : "BLUE"} ESTÁ DESCALIFICADO! ❌`
     );
   };
 
