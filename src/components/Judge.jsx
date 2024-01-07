@@ -8,7 +8,7 @@ export const Judge = () => {
       <Score />
       <Timer />
       <Image />
-      <a href="http://localhost:5173/referee" target="blank">Abrir Marcador</a>
+      <a href="/referee" target="blank">Abrir Marcador</a>
     </section>
   );
 };

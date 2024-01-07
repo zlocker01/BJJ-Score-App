@@ -7,11 +7,11 @@ import "../assets/App/App.css";
 export function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="">
         <Routes>
           <Route path="/" element={<AuthLayout />}>
             <Route index element={<Judge />} />
-            <Route path="referee" element={<Referee />} />
+            <Route path="/referee" element={<Referee />} />
           </Route>
         </Routes>
       </BrowserRouter>
