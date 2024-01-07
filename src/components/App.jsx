@@ -7,7 +7,7 @@ import "../assets/App/App.css";
 export function App() {
   return (
     <>
-      <BrowserRouter basename="">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<AuthLayout />}>
             <Route index element={<Judge />} />
