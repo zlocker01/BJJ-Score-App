@@ -1,6 +1,6 @@
 ## Descricpion 🖥️
-
-proyect to psychologist patients adminstration
+PROYETO REAL Scoreboard para Jiu Jitsu perzonalisable para cada torneo con opcion a coloar la imagen del logotipo en el marcador
+cont Rect + SASS
 With: MERN stack and SASS + Axios + Prepros
 ## Autor ✒️
 
